@@ -1,0 +1,242 @@
+/*nav-bar*/
+.nav-bar {
+    height: 63px;
+    position: sticky;
+    top: 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    z-index: 999;
+}
+.nav-bar h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 61px;
+    color: #212121;
+    float: left;
+}
+.nav-bar .con {
+    display: flex;
+    justify-content: space-between;
+    line-height: 61px;
+    font-size: 12px;
+    color: #616161;
+}
+.con .left {
+    margin-left: 5px;
+}
+.con .separator {
+    color: #212121;
+    margin: 0 3px;
+}
+.con a:hover {
+    color: #ff6700;
+}
+/*xm-buyBox*/
+.xm-buyBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 12px;
+}
+.xm-buyBox>img {
+    width: 560px;
+    height: 560px;
+} 
+/*pro-info*/
+.pro-info {
+    width: 606px;
+}
+.pro-info h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #212121;
+}
+.pro-info p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ff6700;
+}
+.pro-info .sale-desc {
+    color: #b0b0b0;
+    padding-top: 8px;
+}
+.pro-price {
+    padding: 12px 0 20px;
+    font-size: 18px;
+    color: #ff6700;
+    border-bottom: 1px solid #e0e0e0;
+}
+.pro-price del {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+/*user-default-address*/
+.user-default-address {
+    margin: 30px 0;
+    padding: 30px 40px 30px 50px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+.address-info {
+    color: #333;
+}
+.address-info span {
+    margin-right: 14px;
+}
+.address-info a,
+.over {
+    color: #ff6700;
+}
+/*list-wrap*/
+.pro-choose {
+    margin-bottom: 30px;
+}
+.step-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.step-list {
+    width: 298px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #ff6700;
+    font-size: 16px;
+    color: #ff6700;
+}
+.step-list .name {
+    margin-left: 70px;
+}
+.step-list .value {
+    margin-left: 30px;
+    color: #757575;
+}
+.pro-choose .step-list img {
+    width: 16px;
+    height: 16px;
+    margin-left: 70px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.step-title a {
+    float: right;
+    font-size: 14px;
+    color: #ff6700;
+}
+.pro-choose li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 524px;
+    height: 80px;
+    background: #fff;
+    cursor: pointer;
+    padding: 30px 40px;
+    border: 1px solid #e0e0e0;
+}
+.pro-choose li .name {
+    font-size: 18px;
+    color: #333;
+}
+.pro-choose li .desc {
+    color: #b0b0b0;
+}
+.pro-choose img {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+}
+.pro-choose .agreement{
+    color: #757575;
+}
+.agreement a {
+    color: #ff6700;
+}
+.pro-choose .price {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 14px;
+    color: #757575;
+}
+/*pro-list*/
+.pro-list {
+    background: #f9f9fa;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.pro-list div {
+    line-height: 30px;
+    color: #616161;
+}
+.pro-list span,
+.pro-list del {
+    float: right;
+    margin-left: 5px;
+}
+.pro-list .totlePrice {
+    color: #ff6700;
+    font-size: 24px;
+    padding-top: 20px;
+}
+/*btn-wrap*/
+.btn-wrap {
+    margin: 10px 0 20px 0;
+}
+.btn-wrap a:first-child {
+    border: 1px solid #ff6700;
+    background: #fff;
+    color: #ff6700;
+    width: 298px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    text-align: center;
+}
+.btn-wrap a:first-child:hover {
+    color: #fff;
+    background-color: #f25807;
+    border-color: #f25807;
+}
+.btn-wrap a:last-child {
+    width: 140px;
+    height: 52px;
+    margin-left: 10px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: #b0b0b0;
+}
+.btn-wrap a:last-child:hover {
+    background-color: #757575;
+    color: #fff;
+}
+/*pro-policy*/
+.pro-policy a {
+    margin-right: 15px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+/*pro-infomation*/
+.pro-infomation {
+    padding-bottom: 50px;
+    background: #f5f5f5;
+}
+.pro-infomation h3 { 
+    padding: 22px 0;
+    font-size: 22px;
+    color: #333;
+    font-weight: 400;
+}
+.pro-infomation .con{
+    padding: 30px 0;
+    text-align: center;
+    background: #fff;
+}
+.con>img {
+    
+}
