@@ -6,7 +6,9 @@
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     background: #fff;
-    z-index: 999;
+    -webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.07);
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.07);
+    z-index: 998;
 }
 .nav-bar h2 {
     font-size: 18px;
@@ -73,11 +75,19 @@
 }
 /*user-default-address*/
 .user-default-address {
+    position: relative;
     margin: 30px 0;
     padding: 30px 40px 30px 50px;
     background: #fafafa;
     border: 1px solid #e0e0e0;
     font-size: 14px;
+}
+.location {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 20px;
+    color: #999;
 }
 .address-info {
     color: #333;
@@ -123,6 +133,19 @@
     float: right;
     font-size: 14px;
     color: #ff6700;
+}
+.checkbox {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #b0b0b0;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.agreement .checkbox {
+    border-radius: 0%;
+    margin-right: 5px;
 }
 .pro-choose li {
     position: relative;
@@ -184,6 +207,11 @@
 .btn-wrap {
     margin: 10px 0 20px 0;
 }
+.btn-wrap .default {
+    font-size: 20px;;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
 .btn-wrap a:first-child {
     border: 1px solid #ff6700;
     background: #fff;
@@ -220,6 +248,11 @@
     margin-bottom: 10px;
     font-size: 14px;
     color: #b0b0b0;
+}
+.pro-policy span {
+    margin-right: 5px;
+    font-size: 20px;
+    vertical-align: bottom;
 }
 /*pro-infomation*/
 .pro-infomation {

@@ -12,6 +12,7 @@
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 997;
 }
 .seckill-head a {
     display: flex;
@@ -39,6 +40,15 @@
 }
 .item-seckill {
     margin-bottom: 10px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.item-seckill:hover {
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
 }
 .seckill-box {
     width: 400px;

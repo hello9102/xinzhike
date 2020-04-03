@@ -10,27 +10,50 @@
 <body>
     <!--header-->
     <header>
-        <div class="site-topbar">
+        <div class="site-topbar" id="totop">
             <div class="container clearfix">
                 <ul class="topbar-nav">
                     <li><a href="index.html">小米商城</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">MIUI</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">IoT</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">云服务</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">金融</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">有品</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">小爱开放平台</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">企业团购</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">资质证照</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">协议规则</a></li>
-                    <li><a href="#">下载app</a></li>
+                    <span class="sep">|</span>
+                    <li>
+                        <a href="#" class="topbar-download">下载app
+                            <span class="appcode">
+                                <img src="images/download.png">
+                                小米商城APP
+                            </span>
+                        </a>
+                    </li>
+                    <span class="sep">|</span>
                     <li><a href="#">Select Location</a></li>
                 </ul>
                 <ul class="topbar-info">
                     <li><a href="#">登录</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">注册</a></li>
+                    <span class="sep">|</span>
                     <li><a href="#">消息通知</a></li>
-                    <li><a href="#"><span></span>购物车（0）</a></li>
+                    <li>
+                        <a href="#"><span class="iconfont-cart"></span>购物车（0）</a>
+                        <div class="cart-content">购物车中还没有商品，赶紧选购吧！</div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -49,7 +72,7 @@
             </ul>
             <div class="header-search">
                 <input type="text" name="search">
-                <span></span>
+                <span class="iconfont search-btn"></span>
             </div>
         </div>
     </header>
@@ -57,16 +80,16 @@
     <div class="home-hero container">
         <div class="home-hero-swiper">
             <ul class="site-category">
-                <li>手机 电话卡<span class="icon"></span></li>
-                <li>电视 盒子<span class="icon"></span></li>
-                <li>笔记本 显示器 平板<span class="icon"></span></li>
-                <li>家电 插线板<span class="icon"></span></li>
-                <li>出行 穿戴<span class="icon"></span></li>
-                <li>智能 路由器<span class="icon"></span></li>
-                <li>电源 配件<span class="icon"></span></li>
-                <li>健康 儿童<span class="icon"></span></li>
-                <li>耳机 音箱<span class="icon"></span></li>
-                <li>生活 箱包<span class="icon"></span></li>
+                <li>手机 电话卡<span class="iconfont-arrow-right-big"></span></li>
+                <li>电视 盒子<span class="iconfont-arrow-right-big"></span></li>
+                <li>笔记本 显示器 平板<span class="iconfont-arrow-right-big"></span></li>
+                <li>家电 插线板<span class="iconfont-arrow-right-big"></span></li>
+                <li>出行 穿戴<span class="iconfont-arrow-right-big"></span></li>
+                <li>智能 路由器<span class="iconfont-arrow-right-big"></span></li>
+                <li>电源 配件<span class="iconfont-arrow-right-big"></span></li>
+                <li>健康 儿童<span class="iconfont-arrow-right-big"></span></li>
+                <li>耳机 音箱<span class="iconfont-arrow-right-big"></span></li>
+                <li>生活 箱包<span class="iconfont-arrow-right-big"></span></li>
             </ul>
             <div class="banner">
                 <div class="swiper-pagination">
@@ -84,37 +107,37 @@
             <ul class="home-channel-list">
                 <li>
                     <a href="shop.html">
-                        <span class="icon"></span>
+                        <img src="images/channel-list1.png">
                         <p>小米秒杀</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"></span>
+                        <img src="images/channel-list2.png">
                         <p>企业团购</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"></span>
+                        <img src="images/channel-list3.png">
                         <p>F码通道</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"></span>
+                        <img src="images/channel-list4.png">
                         <p>米粉卡</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"></span>
+                        <img src="images/channel-list5.png">
                         <p>以旧换新</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"></span>
+                        <img src="images/channel-list6.png">
                         <p>话费充值</p>
                     </a>
                 </li>
@@ -135,8 +158,8 @@
                 <div class="box-hd">
                     <p class="title">小米闪购</p>
                     <div class="swiper-controls">
-                        <span><</span>
-                        <span>></span>
+                        <span class="iconfont-arrow-left-big"></span>
+                        <span class="iconfont-arrow-right-big"></span>
                     </div>
                 </div>
                 <!--box-bd-->
@@ -199,7 +222,7 @@
                     <div class="title">手机</div>
                     <div class="more">
                         <span>查看全部</span>
-                        <span>></span>
+                        <span class="iconfont-arrow-right-big"></span>
                     </div>
                 </div>
                 <!--box-bd1-->
@@ -367,7 +390,7 @@
                                     <p>浏览更多</p>
                                     <p>热门</p>
                                 </div>
-                                <img src="">
+                                <span class="iconfont-circle-arrow-right"></span>
                             </li>
                         </div> 
                     </ul>
@@ -458,7 +481,7 @@
                                     <p>浏览更多</p>
                                     <p>热门</p>
                                 </div>
-                                <img src="#">
+                                <span class="iconfont-circle-arrow-right"></span>
                             </li>
                         </div> 
                     </ul>
@@ -548,7 +571,7 @@
                                     <p>浏览更多</p>
                                     <p>热门</p>
                                 </div>
-                                <img src="#">
+                                <span class="iconfont-circle-arrow-right"></span>
                             </li>
                         </div> 
                     </ul>
@@ -639,7 +662,7 @@
                                     <p>浏览更多</p>
                                     <p>热门</p>
                                 </div>
-                                <img src="#">
+                                <span class="iconfont-circle-arrow-right"></span>
                             </li>
                         </div> 
                     </ul>
@@ -722,7 +745,7 @@
                                     <p>浏览更多</p>
                                     <p>热门</p>
                                 </div>
-                                <img src="#">
+                                <span class="iconfont-circle-arrow-right"></span>
                             </li>
                         </div> 
                     </ul>
@@ -734,14 +757,15 @@
                     <div class="title">视频</div>
                     <div class="more">
                         <span>查看全部</span>
-                        <span>></span>
+                        <span class="iconfont-arrow-right-big"></span>
                     </div>
                 </div>
                 <ul class="video-list">
                     <li class="video-item">
                         <a href="#">
-                            <div class="figure digure-img">
+                            <div class="figure">
                                 <img src="images/video1.png">
+                                <span class="iconfont-play"></span>
                             </div>
                             <h3>小米10 8K手机拍大片</h3>
                         </a>
@@ -750,22 +774,25 @@
                         <a href="#">
                             <div class="figure digure-img">
                                 <img src="images/video2.png">
+                                <span class="iconfont-play"></span>
                             </div>
-                            <h3>小米10发布会></h3>
+                            <h3>小米10发布会</h3>
                         </a>
                     </li>
                     <li class="video-item">
                         <a href="#">
                             <div class="figure digure-img">
                                 <img src="images/video3.png">
+                                <span class="iconfont-play"></span>
                             </div>
-                            <h3>小米MIX Alpha 开箱视频></h3>
+                            <h3>小米MIX Alpha 开箱视频</h3>
                         </a>
                     </li>
                     <li class="video-item">
                         <a href="#">
                             <div class="figure digure-img">
                                 <img src="images/video4.png">
+                                <span class="iconfont-play"></span>
                             </div>
                             <h3>小米5G新品手机发布会</h3>
                         </a>
@@ -781,31 +808,31 @@
             <ul class="footer-service">
                 <li class="list-service">
                     <a href="#">
-                        <i></i>
+                        <span class="iconfont-tool"></span>
                         <span>预约维修服务</span>
                     </a>
                 </li>
                 <li class="list-service">
                     <a href="#">
-                        <i></i>
+                        <span class="iconfont-circle-7"></span>
                         <span>7天无理由退货</span>
                     </a>
                 </li>
                 <li class="list-service">
                     <a href="#">
-                        <i></i>
+                        <span class="iconfont-circle-15"></span>
                         <span>15天免费换货</span>
                     </a>
                 </li>
                 <li class="list-service">
                     <a href="#">
-                        <i></i>
+                        <span class="iconfont-gift"></span>
                         <span>满99元包邮</span>
                     </a>
                 </li>
                 <li class="list-service">
                     <a href="#">
-                        <i></i>
+                        <span class="iconfont-location"></span>
                         <span>520余家售后网点</span>
                     </a>
                 </li>
@@ -853,11 +880,12 @@
                 <div class="col-contact">
                     <p class="phone">400-100-5678</p>
                     <p>8:00-18:00（仅收市话费）</p>
-                    <a href="#" class="btn-small"><span></span>人工客服</a>
+                    <a href="#" class="btn-small"><span class="iconfont-message2"></span>  人工客服</a>
                     <div class="follow">
                         <span>关注小米：</span>
                         <a href="#"></a>
                         <a href="#"></a>
+                        <img src="images/wx-img.png">
                     </div>
                 </div>
             </div>
@@ -935,7 +963,35 @@
         </div>
     </div>
     <div class="home-tool-bar">
-        <a></a>
+        <a href="#" class="item">
+            <span class="pop-content">
+                <img src="images/download.png">
+                    手机扫一扫
+                    <br>
+                    一分赢好礼
+            </span>
+        </a>
+        <a href="#" class="item">
+            <span class="text">
+                个人中心
+            </span>
+        </a>
+        <a href="#" class="item">
+            <span class="text">
+                售后服务
+            </span>
+        </a>
+        <a href="#" class="item">
+            <span class="text">
+                人工客服
+            </span>
+        </a>
+        <a href="#" class="item">
+            <span class="text">
+                购物车（0）
+            </span>
+        </a>
+        <a href="#totop" class="item"></a>
     </div>
 </body>
 </html>
