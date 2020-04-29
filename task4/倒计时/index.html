@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            margin-top:100px;
+            text-align: center;
+        }
+        form {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        #time span{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h3>JavaScript实例——倒计时</h3>
+    <form>
+        <input type="number" id="totalHour"><span> 时</span>
+        <input type="number" id="totalMinute"><span> 分</span>
+        <input type="number" id="totalSecond"><span> 秒</span>
+		<input type="button" value="开始" id="start">
+		<input type="button" value="暂停" id="stop">
+        <input type="button" value="结束" id="end">  
+    </form>
+    <div id="time">
+		<span id="hour">00</span>
+		<span>:</span> 
+		<span id="minute">00</span>
+		<span>:</span>
+		<span id="second">00</span>
+    </div>
+</body>
+<script>
+	var start = document.getElementById("start");
+    var stop = document.getElementById("stop");
+    var end = document.getElementById("end");
+	var timer;
+	//获取输入的时间
+	function getTime(){
+		var totalHour = parseInt(document.getElementById("totalHour").value),
+			totalMinute = parseInt(document.getElementById("totalMinute").value),
+			totalSecond = parseInt(document.getElementById("totalSecond").value),
+			hour = document.getElementById("hour"),
+			minute = document.getElementById("minute"),
+			second = document.getElementById("second");
+		if(totalMinute>=60 || totalSecond>=60 || totalHour<0 || totalMinute<0 || totalSecond<0) {
+			return false;
+		}
+		//判断输入的值是否为NaN 以及 个位数时加0
+		isNaN(totalHour) ? hour.innerHTML="00" : (totalHour<10 ? hour.innerHTML= "0"+totalHour : hour.innerHTML = totalHour);
+		isNaN(totalMinute) ? minute.innerHTML="00" : (totalMinute<10 ? minute.innerHTML= "0"+totalMinute : minute.innerHTML = totalMinute);
+		isNaN(totalSecond) ? second.innerHTML="00" : (totalSecond<10 ? second.innerHTML= "0"+totalSecond : second.innerHTML = totalSecond);
+	}
+	//倒计时
+	function updateTime(){
+		if(second.innerHTML == "00" && hour.innerHTML=="00" && minute.innerHTML=="00"){
+			clearInterval(timer);
+			return;
+		}else if(minute.innerHTML == "00" && second.innerHTML == "00") {
+			second.innerHTML = 59;
+			minute.innerHTML = 59;
+			hour.innerHTML = parseInt(hour.innerHTML) - 1;
+			hour.innerHTML<10 ? hour.innerHTML= "0"+hour.innerHTML : hour.innerHTML = hour.innerHTML;
+		}else if(second.innerHTML == "00"){
+			second.innerHTML = 59;
+			minute.innerHTML = parseInt(minute.innerHTML) - 1;
+			minute.innerHTML<10 ? minute.innerHTML= "0"+minute.innerHTML : minute.innerHTML = minute.innerHTML;
+		}else {
+			second.innerHTML = parseInt(second.innerHTML) - 1;
+			second.innerHTML<10 ? second.innerHTML= "0"+second.innerHTML : second.innerHTML = second.innerHTML;
+		}
+	}
+	//开始事件
+	start.onclick = function(){
+		clearInterval(timer);
+		getTime();
+		if(getTime() === false) {
+			alert("请输入正确的时间哦");
+			totalHour.value = "";
+			totalMinute.value = "";
+			totalSecond.value = "";
+		}else{
+			timer=setInterval(updateTime,1000);
+		}
+	}
+	//暂停事件
+	stop.onclick = function(){
+		clearInterval(timer);
+		if(stop.value== "继续"){
+			timer=setInterval(updateTime,1000);
+		}
+		stop.value == "暂停" ? stop.value = "继续" : stop.value = "暂停";
+	}
+	//结束事件
+	end.onclick = function(){
+		clearInterval(timer);
+		totalHour.value = "";
+		totalMinute.value = "";
+		totalSecond.value = "";
+		hour.innerHTML = "00";
+		minute.innerHTML = "00";
+		second.innerHTML = "00";
+	}
+</script>
+</html>
