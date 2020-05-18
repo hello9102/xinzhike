@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS语言实现表单正则验证</title>
+    <style rel="stylesheet">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #99FFFF;
+            font-size: 15px;
+        }
+        form {
+            width: 700px;
+            margin: auto auto;
+        }
+        form>h2 {
+            margin: 20px 0 20px 100px;
+        }
+        form>h2,
+        form>div {
+            margin: 20px 0 20px 100px;
+        }
+        form input {
+            color: #333;
+            border: 1px solid orange;
+            padding-left:5px;
+        }
+        form>div span:first-child {
+            display: inline-block;
+            width: 60px;
+            text-align: justify;
+            text-align-last: justify;
+        }
+        form>div span:last-child {
+            color: red;
+            font-size: 13px;
+        }
+        .girl {
+            margin-left: 40px;
+        }
+        #span_sex {
+           margin-left: 76px;
+        }
+        #span_degree {
+            margin-left: 111px;
+        }
+        .sub input{
+            padding: 5px 10px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="" omsubmit='return checkForm()'>
+        <h2>个人信息登记表</h2>
+        <div>
+            <span>登陆账号</span>：
+            <input type="text" name="user-name" id="name" onblur="Name()">
+            <span id="span_name">6-18位有效字符（字母、数字、下划线）</span>
+        </div>
+        <div>
+            <span>登陆密码</span>：
+            <input type="text" name="" id="pwd" onblur="Password()">
+            <span id="span_pwd">6-18位任意字符</span>
+        </div>
+        <div>
+            <span>重复密码</span>：
+            <input type="text" id="pwd2" onblur="Password2()">
+            <span id="span_pwd2">重复密码与登陆密码一致</span>
+        </div>
+        <div>
+            <span>性别</span>：
+            <input type="radio" name="sex" value="boy">男
+            <input type="radio" name="sex" value="girl" class="girl">女
+            <span id="span_sex">必须选择一个</span>
+        </div>
+        <div>
+            <span>年龄</span>：
+            <input type="text" name="age" id="age" onblur="Age()">
+            <span id="span_age">大于0的任意两位整数</span>
+        </div>
+        <div>
+            <span>手机号码</span>：
+            <input type="text" name="cellPhone" id="cellPhone" onblur="CellPhone()">
+            <span id="span_cellPhone">由1开头的11位整数</span>
+        </div>
+        <div>
+            <span>邮箱</span>：
+            <input type="text" name="email" id="email" onblur="Email()">
+            <span id="span_email">有效的Email地址</span>
+        </div>
+        <div>
+            <span>学历</span>：
+            <select id="degree">
+                <option value="">请选择</option>
+                <option value="undergraduate">本科</option>
+                <option value="junior">专科</option>
+                <option vaule="postgraduate">研究生</option>
+                <option value="doctor">博士</option>
+            </select>
+            <span id="span_degree">必须选择一个学历选项</span>
+        </div>
+        <hr/>
+        <div class="sub">
+            <input type="submit" value="提交" onclick="Sex();Degree()">
+            <input type="reset" value="重置">
+        </div>
+    </form>
+    <script>
+        function Name() {
+            //登陆账号
+            var name = document.getElementById("name").value;
+            var nameReg = /^\w{6,18}$/;
+            if (!nameReg.test(name)) {
+                span_name.innerHTML = "请输入6-18位有效字符（字母、数字、下划线）";
+                return false;
+            }else {
+                span_name.innerHTML = "正确";
+                return true;
+            }
+        }
+        function Password() {
+            //密码
+            var pwd = document.getElementById("pwd").value;
+            var pwdReg = /^[\d\D]{6,18}$/;
+            if (!pwdReg.test(pwd)) {
+                span_pwd.innerHTML = "格式错误，请输入6~18位任意字符";
+                return false;
+            }else {
+                span_pwd.innerHTML = "正确";
+                return true;
+            }
+        }
+        function Password2() {
+            //确认密码
+            var pwd = document.getElementById("pwd").value;
+            var pwd2 = document.getElementById("pwd2").value;
+            if (pwd !== pwd2) {
+                span_pwd2.innerHTML = "两次输入不一致";
+                return false;
+            }else {
+                span_pwd2.innerHTML = "两次输入一致";
+                return true;
+            }
+        }
+        function Age() {
+            //验证年龄
+            var age = document.getElementById("age").value;
+            var ageReg = /^[1-9][0-9]?$/;
+            if (!ageReg.test(age)) {
+                span_age.innerHTML = "请输入大于0的任意两位整数!";
+                return false;
+            }
+            else {
+                span_age.innerHTML = "正确";
+                return true;
+            }
+        }
+        function CellPhone() {
+            //验证手机号
+            var cellPhone = document.getElementById("cellPhone").value;
+            var cellPhoneReg = /^1\d{10}$/;
+            if(!cellPhoneReg.test(cellPhone)) {
+                span_cellPhone.innerHTML = "请输入由1开头的11位整数";
+                return false;
+            }else {
+                span_cellPhone.innerHTML = "正确";
+                return true;
+            }
+        }
+        function Email() {
+            //邮箱验证
+            var email = document.getElementById("email").value;
+            var emailReg = /^[\w\d]{1,9}@[\w\d]{1,9}\.[\w]{2,3}$/;
+            if (!emailReg.test(email)) {
+                span_email.innerHTML = "错误!如:jack@163.com";
+                return false;
+            }
+            else {
+                span_email.innerHTML = "正确";
+                return true;
+            }
+        }
+        function Sex(){
+            //判断单选框是否选中
+            var sex = document.getElementsByName("sex"); 
+            var flag = 0; 
+            for (var i=0;i<sex.length;i++) { 
+                if (sex.item(i).checked == true) { 
+                    flag = 1; 
+                    break; 
+                } 
+            } 
+            if (!flag) {
+                alert("性别必须选择一个");
+                return false;
+            }else {
+                return true;
+            }
+        }
+        function Degree(){ 
+            //判断学历是否选中
+            var degree= document.getElementById("degree").value; 
+            if (!degree) { 
+                alert("学历必须选择一个");
+                return false;
+            }else {
+                return true;
+            }
+        }
+        function checkForm() {
+            //判断表单信息是否填写正确
+            var check = Name() && Password() && Password2() && Degree() && Sex() && Email() && CellPhone() && Age();
+            return check; 
+        }
+    </script>
+</body>
+</html>
